@@ -3,7 +3,7 @@ using System;
 
 namespace Placeholder
 {
-    // Responsibility of ImageOutput is to show and track the parachute changes
+    // Responsibility of ImageOutput is to show current parachute and guessed word.
     public class ImageOutput
     {
         // an array holding the different phases of the parachute man
@@ -13,21 +13,17 @@ namespace Placeholder
             "  ___  \n \\   / \n  \\ /  \n   O   \n  /|\\  \n  / \\  \n^^^^^^^\n",
             " \\   / \n  \\ /  \n   O   \n  /|\\  \n  / \\  \n^^^^^^^\n",
             "  \\ /  \n   O   \n  /|\\  \n  / \\  \n^^^^^^^\n",
-            "   X   \n  /|\\  \n  / \\  \n^^^^^^^\n",
+            "   X   \n  /|\\  \n  / \\  \n^^^^^^^\n"
 
         };
+        
         // Creates the image of the letter spaces and the parachute
-        public void DrawImage()
+        public void DrawOutput()
         {
-
+            // a placeholder, will use a variable instead
+            Console.WriteLine(_parachuteMan[1]);
+            
         }
-
-        private void CutParachute()
-        {
-
-        }
-
-
 
 
     }
