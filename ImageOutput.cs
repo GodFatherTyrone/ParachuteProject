@@ -1,7 +1,7 @@
 using System;
 // create parachute image and letter spaces
 
-namespace Placeholder
+namespace Unit03.Game
 {
     // Responsibility of ImageOutput is to show current parachute and guessed word.
     public class ImageOutput
