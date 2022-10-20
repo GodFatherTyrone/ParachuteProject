@@ -1,6 +1,7 @@
 ﻿using System;
+using Unit03.Game;
 
-namespace Unit03.Game
+namespace ParachuteProject
 {
     internal class Program
     {
