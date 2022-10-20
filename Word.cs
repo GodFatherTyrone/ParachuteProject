@@ -11,21 +11,22 @@ namespace Unit03.Game
         public List<List<string>> compileWord() {
             // creates the list of random words
             // I just didn't like it in newWord()
-            List<List<string>> randomWords = new List<List<string>> ();
+            List<List<string>> randomWords = new List<List<string>>(); 
+                //should this be List<List<s>> or List<String[]>?
 
-            string[] new1 = {"B", "A", "N", "D"};
+            String[] new1 = {"B", "A", "N", "D"};
             List<string> word1 = new List<string>(new1);
             randomWords.Add(word1);
 
-            string[] new2 = {"N", "A", "M", "E"};
+            String[] new2 = {"N", "A", "M", "E"};
             List<string> word2 = new List<string>(new2);
             randomWords.Add(word2);
 
-            string[] new3 = {"F", "I", "R", "E"};
+            String[] new3 = {"F", "I", "R", "E"};
             List<string> word3 = new List<string>(new3);
             randomWords.Add(word3);
 
-            string[] new4 = {"C", "O", "V", "E"};
+            String[] new4 = {"C", "O", "V", "E"};
             List<string> word4 = new List<string>(new4);
             randomWords.Add(word4);
 
