@@ -1,3 +1,6 @@
+
+using System;
+
 namespace Unit03.Game
 {
     /// <summary>
@@ -15,10 +18,9 @@ namespace Unit03.Game
         /// </summary>
         public Director()
         {
+            private bool _isPlaying= true;
             Word Main_Word= new Word();
-            ImageOutput Jumper= new _parachuteMan();
-            ImageOutput _GameOver = new Fell();
-            string guess = "";
+            private string guess= "";
 
         }
 
@@ -27,7 +29,7 @@ namespace Unit03.Game
         /// </summary>
         public void StartGame()
         {
-            while (_isPlaying)
+            while (_isPlaying = true)
             {
                 GetInputs();
                 DoUpdates();
@@ -40,8 +42,8 @@ namespace Unit03.Game
         /// </summary>
         private void GetInputs()
         {
-            Console.WriteLine($"There is a 5 letter word, Please guess a letter [a-z]: ");
-            guess= Console.Readline();
+            Console.WriteLine($"There is a 4 letter word, Please guess a letter [a-z]: ");
+            string guess = Console.Readline();
 
 
         }
@@ -50,15 +52,15 @@ namespace Unit03.Game
         /// Desides whether the guess is write or wrong.
         /// Make sure the task has been updated to work with the Guesses class
         /// </summary>
-        private void DoUpdates()
+        public void DoUpdates()
         {
-           
+            ///push
             Guesses."Task"(guess);
-            ImageOutput Jumper= _parachuteMan();
-            /// Is man dead
-            ImageOutput _GameOver = Fell();
-
-
+            
+            ///pull
+            Guesses."Variable" = Wrong_Guess_Count();
+            
+    
         }
 
         /// <summary>
@@ -67,14 +69,21 @@ namespace Unit03.Game
         /// Ends/Contunies the game.
         /// </summary>
         private void DoOutputs()
-        {
-            Console.WriteLine($"{_parachuteMan}");
-            
-            if (GameOver == True)
+        {   
+            ///too many wrong guesses, End game
+            if (Wrong_Guess_Count > 4)
             {
                 _isPlaying = false;
+                ImageOutput.EndMessage();
             }
-            
+            ///Correct guess, continue
+            else if(Wrong_Guess_Count <= 4)
+            {
+                ImageOutput.DrawOutput(Wrong_Guess_Count);
+            }
+            else{
+                return;
+            }
         }
     }
 }
