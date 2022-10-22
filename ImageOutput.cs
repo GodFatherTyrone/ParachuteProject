@@ -13,22 +13,31 @@ namespace Unit03.Game
             "  ___  \n \\   / \n  \\ /  \n   O   \n  /|\\  \n  / \\  \n^^^^^^^\n",
             " \\   / \n  \\ /  \n   O   \n  /|\\  \n  / \\  \n^^^^^^^\n",
             "  \\ /  \n   O   \n  /|\\  \n  / \\  \n^^^^^^^\n",
-            "   X   \n  /|\\  \n  / \\  \n^^^^^^^\n"
-
+            "   X   \n  /|\\  \n  / \\  \n^^^^^^^\n",
+            "   o   \n  \\|/ \n  / \\  \n^^^^^^^\n"
         };
         
         // Creates the image of the letter spaces and the parachute while game is going
         public void DrawOutput(int Phase)
         {
-            // a placeholder, will use a variable instead
+            Console.WriteLine();
             Console.WriteLine(_parachuteMan[Phase]);
         }
 
         // Creates the image right before the game ends
-        public void EndMessage()
+        public void DeadEndMessage()
         {
             Console.WriteLine("--Game Over--");
+            Console.WriteLine("Correct Word was:");
             Console.WriteLine(_parachuteMan[5]);
+        }
+
+        public void AliveEndMessage()
+        {
+            
+            Console.WriteLine("--You Win!--");
+            Console.WriteLine("Correct Word was:");
+            Console.WriteLine(_parachuteMan[6]);
         }
 
 

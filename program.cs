@@ -7,8 +7,8 @@ namespace ParachuteProject
     {
         static int Main(string[] args)
         {
-            Director director = new Director();
-            director.StartGame();
+            Director theDirector = new Director();
+            theDirector.StartGame();
             return 0;
         }
     }
