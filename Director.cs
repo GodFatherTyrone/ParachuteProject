@@ -16,7 +16,8 @@ namespace Unit03.Game
         /// </summary>
         private bool _isPlaying = true;
         Word Main_Word = new Word();
-        private string guess = "";
+        Guesses.MakeNewGuesslist();
+        public string guess = "";
 
         /// <summary>
         /// Starts the game by running the main game loop.
@@ -37,7 +38,7 @@ namespace Unit03.Game
         private void GetInputs()
         {
             Console.WriteLine($"There is a 4 letter word, Please guess a letter [a-z]: ");
-            guess = Console.ReadLine();
+            string guess = Console.ReadLine();
 
         }
 
@@ -48,12 +49,12 @@ namespace Unit03.Game
         public void DoUpdates()
         {
             ///push
-            Guesses.CheckGuesses(guess, word);
+            Guesses.CheckGuesses();
             
             ///pull
             Guesses."Variable" = Wrong_Guess_Count();
             Guesses."Correct_wordlist"= Correct_wordlist();
-            Guesses."Correct_Guess_Count"= Correct_Guess_Count();
+            
     
         }
 
@@ -76,7 +77,7 @@ namespace Unit03.Game
                 ImageOutput.DrawOutput(Wrong_Guess_Count,Correct_wordlist);
             }
             ///Got the word correct, End Game
-            else if(Correct_Guess_Count >= 4 )
+            else if(Main_Word == Correct_wordlist )
             {
                 _isPlaying = false;
                 ImageOutput.AliveEndMessage();

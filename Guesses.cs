@@ -20,22 +20,35 @@ namespace Unit03.Game
 
             public List<Guesses> myListOfGuesses = new List<Guesses>();
             public List<Guesses> myListOfFailedGuesses = new List<Guesses>();
-
-    
-        public void CheckGuesses(string Guess)
+        public void MakeNewGuesslist();
         {
-            for (int i = 0; i < 4; i+ ) 
+            String[] New_Guesslist = {"_","_","_","_"};
+        }
+    
+        public void CheckGuesses()
+        {
+            Director.guess= Guess();
+            Director.Main_Word = Main_Word();
+            String[] Old_Guesslist = New_Guesslist;
+            
+            for (int i = 0; i < 4; i+ )
             {
-                // This changes the correct letter in the correct position
-                if (Director.Main_Word{i} == Guess)
+                ///if correct changes the correct letter in the correct position
+                ///if incorrect do nothing
+                if (Main_Word{i} == Guess)
                 {
-
+                    New_Guesslist = Guess[i];
                 }
-                //changes the wrong guess count
-                else if(Director.Main_Word{i} != Guess)
+                else
                 {
-
+                    return;
                 }
+            }
+            ///if incorect add to wrong guess count
+            ///if correct do nothing
+            if (Old_Guesslist != New_Guesslist);
+            {
+                ///Add +1 to wrongguesscount
             }
 
         }
