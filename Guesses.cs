@@ -20,9 +20,10 @@ namespace Unit03.Game
 
             public List<Guesses> myListOfGuesses = new List<Guesses>();
             public List<Guesses> myListOfFailedGuesses = new List<Guesses>();
-        public void MakeNewGuesslist();
+        public void MakeNewGuesslist()
         {
-            String[] New_Guesslist = {"_","_","_","_"};
+            String[] list = {"_","_","_","_"};
+            List<string> New_Guesslist = new List<string>(list);
         }
     
         public void CheckGuesses()
